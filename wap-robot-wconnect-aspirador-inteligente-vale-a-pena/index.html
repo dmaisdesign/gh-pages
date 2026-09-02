@@ -79,6 +79,348 @@ O aspirador de pó robô WAP Robot WConnect é uma inovação que promete facili
 
     
 
+<style id="finance-visual-theme">
+        :root {
+            --finance-navy: #071f2d;
+            --finance-navy-soft: #0d3142;
+            --finance-green: #12a873;
+            --finance-green-dark: #087a56;
+            --finance-mint: #dff6ec;
+            --finance-ink: #102a36;
+            --finance-muted: #647780;
+            --finance-paper: #f4f7f4;
+            --finance-line: #dce6e1;
+            --finance-white: #ffffff;
+            --finance-shadow: 0 18px 45px rgba(7, 31, 45, 0.09);
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            background:
+                radial-gradient(circle at 8% 8%, rgba(18, 168, 115, 0.08), transparent 23rem),
+                linear-gradient(180deg, #f8faf8 0%, var(--finance-paper) 100%) !important;
+            color: var(--finance-ink) !important;
+            font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        ::selection { background: var(--finance-green); color: #fff; }
+        a { transition: color .2s ease, opacity .2s ease, border-color .2s ease, transform .2s ease; }
+        h1, h2, h3, .h1, .h2, .h3, .display-4, .display-5, .display-6 {
+            color: var(--finance-ink);
+            font-family: Georgia, "Times New Roman", serif;
+            letter-spacing: -.025em;
+        }
+
+        body > .navbar {
+            background: linear-gradient(105deg, #061b27 0%, var(--finance-navy) 58%, #0a3b3d 100%) !important;
+            border-bottom: 3px solid var(--finance-green);
+            box-shadow: 0 10px 30px rgba(3, 18, 27, .18) !important;
+        }
+        .navbar .container { min-height: 70px; }
+        .navbar-brand { letter-spacing: -.03em; }
+        .navbar-brand span { font-family: Georgia, "Times New Roman", serif; font-size: 1.65rem !important; }
+        .navbar .nav-link {
+            position: relative;
+            color: rgba(255, 255, 255, .78) !important;
+            font-size: .78rem !important;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+        .navbar .nav-link::after {
+            position: absolute;
+            right: .5rem;
+            bottom: .15rem;
+            left: .5rem;
+            height: 2px;
+            content: "";
+            background: var(--finance-green);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .2s ease;
+        }
+        .navbar .nav-link:hover { color: #fff !important; }
+        .navbar .nav-link:hover::after { transform: scaleX(1); }
+        .navbar-toggler:focus { box-shadow: 0 0 0 .2rem rgba(18, 168, 115, .3) !important; }
+        .navbar form .input-group {
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .09);
+        }
+        .navbar .form-control, .navbar .input-group-text {
+            border: 0 !important;
+            background: transparent !important;
+            color: #fff !important;
+        }
+        .navbar .form-control::placeholder { color: rgba(255, 255, 255, .6); }
+        .navbar .form-control:focus { box-shadow: none; }
+        .navbar #searchResults {
+            overflow: hidden;
+            border: 1px solid var(--finance-line);
+            border-radius: 14px !important;
+            background: #fff;
+            box-shadow: var(--finance-shadow) !important;
+        }
+        #searchResults .list-group-item { color: var(--finance-ink); background: #fff; }
+        #searchResults .list-group-item:hover { background: var(--finance-mint); }
+
+        main.container { padding-top: .75rem; }
+        main > header {
+            position: relative;
+            padding: 1.5rem 0 1.5rem 1.4rem !important;
+            border: 0 !important;
+            text-align: left !important;
+        }
+        main > header::before {
+            position: absolute;
+            top: 1.65rem;
+            bottom: 1.65rem;
+            left: 0;
+            width: 5px;
+            border-radius: 9px;
+            content: "";
+            background: var(--finance-green);
+        }
+        main > header .text-muted { color: var(--finance-green-dark) !important; }
+        main > header .lead { color: var(--finance-muted) !important; }
+
+        .position-relative.hero-card {
+            border: 1px solid rgba(255, 255, 255, .16);
+            border-radius: 20px;
+            box-shadow: var(--finance-shadow);
+        }
+        .bg-gradient-overlay {
+            height: 76% !important;
+            background: linear-gradient(to top, rgba(4, 22, 31, .98) 0%, rgba(4, 32, 39, .74) 48%, transparent 100%) !important;
+        }
+        .img-zoom { transition: transform .55s ease, filter .3s ease; }
+        .position-relative.hero-card:hover .img-zoom { transform: scale(1.045); filter: saturate(.9); }
+        .badge-editorial {
+            width: fit-content;
+            border: 0 !important;
+            border-radius: 999px !important;
+            background: var(--finance-green) !important;
+            color: #fff !important;
+            font-family: Inter, "Segoe UI", sans-serif;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+        .text-editorial { color: var(--finance-green-dark) !important; }
+
+        main h2.fw-bold.border-bottom, main h3.fw-bold.border-bottom, aside .border-bottom {
+            border-color: var(--finance-line) !important;
+        }
+        main h2.fw-bold.border-bottom::after, main h3.fw-bold.border-bottom::after {
+            display: block;
+            width: 54px;
+            height: 4px;
+            margin-top: .75rem;
+            border-radius: 99px;
+            content: "";
+            background: var(--finance-green);
+        }
+        .card {
+            overflow: hidden;
+            border: 1px solid var(--finance-line) !important;
+            border-radius: 16px !important;
+            background: rgba(255, 255, 255, .94) !important;
+            box-shadow: 0 10px 28px rgba(7, 31, 45, .07) !important;
+            transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        }
+        .card:hover {
+            border-color: rgba(18, 168, 115, .38) !important;
+            box-shadow: 0 18px 40px rgba(7, 31, 45, .12) !important;
+            transform: translateY(-4px);
+        }
+        .card .card-img-top { border-radius: 0 !important; filter: saturate(.88) contrast(1.02); }
+        .card:hover .card-img-top { filter: saturate(1); }
+        .card-body { padding: 1.35rem; }
+        .card-title a, main a.text-dark { color: var(--finance-ink) !important; }
+        .card-title a:hover, main a.text-dark:hover { color: var(--finance-green-dark) !important; }
+        .text-muted { color: var(--finance-muted) !important; }
+
+        .pagination { gap: .5rem; }
+        .pagination .page-link {
+            border: 1px solid var(--finance-line) !important;
+            border-radius: 999px !important;
+            background: #fff !important;
+            color: var(--finance-ink) !important;
+            box-shadow: 0 5px 16px rgba(7, 31, 45, .05);
+        }
+        .pagination a.page-link:hover { border-color: var(--finance-green) !important; color: var(--finance-green-dark) !important; }
+
+        body > footer {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(130deg, #061a25, #0a2d39 68%, #0a3d3a) !important;
+            border-top: 4px solid var(--finance-green);
+        }
+        body > footer::before {
+            position: absolute;
+            top: -110px;
+            right: -70px;
+            width: 280px;
+            height: 280px;
+            border: 1px solid rgba(18, 168, 115, .16);
+            border-radius: 50%;
+            content: "";
+        }
+        footer .container { position: relative; }
+        footer .text-white-50 { color: #7bd5b3 !important; }
+        footer a { text-underline-offset: 4px; }
+        footer .btn-outline-light { border-color: rgba(255, 255, 255, .28); }
+        footer .btn-outline-light:hover { border-color: var(--finance-green); background: var(--finance-green); }
+
+        #cookie-banner {
+            border-top: 3px solid var(--finance-green);
+            background: rgba(7, 31, 45, .97) !important;
+            box-shadow: 0 -12px 30px rgba(3, 18, 27, .2) !important;
+            backdrop-filter: blur(12px);
+        }
+        #cookie-banner button, #cookie-banner .btn { border-radius: 999px !important; }
+        .btn:focus-visible, a:focus-visible, input:focus-visible {
+            outline: 3px solid rgba(18, 168, 115, .42);
+            outline-offset: 3px;
+        }
+
+        .mobile-header {
+            border-bottom: 5px solid var(--finance-green);
+            box-shadow: 0 18px 40px rgba(7, 31, 45, .15);
+        }
+        .mobile-header > img { filter: saturate(.78) contrast(1.06); }
+        .mobile-header > .position-absolute {
+            background: linear-gradient(90deg, rgba(3, 20, 29, .93) 0%, rgba(4, 35, 39, .78) 52%, rgba(4, 25, 33, .52) 100%) !important;
+        }
+        .mobile-header h1 { max-width: 920px; color: #fff; }
+        .mobile-header p { color: rgba(255, 255, 255, .78); }
+        .mobile-header p a { color: #85e4be !important; }
+
+        .content {
+            color: #263f49;
+            font-size: 1.08rem !important;
+            line-height: 1.85 !important;
+        }
+        .content > p:first-child { font-size: 1.16em; color: #34515b; }
+        .content h2, .content h3, .content h4 {
+            color: var(--finance-ink);
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.25;
+        }
+        .content h2 {
+            margin-top: 2.6rem !important;
+            padding-left: 1rem;
+            border-left: 5px solid var(--finance-green);
+        }
+        .content a { color: var(--finance-green-dark); text-decoration-color: rgba(8, 122, 86, .35); text-underline-offset: 3px; }
+        .content a:hover { color: var(--finance-navy); text-decoration-color: currentColor; }
+        .content blockquote {
+            margin: 2rem 0;
+            padding: 1.4rem 1.6rem;
+            border: 0;
+            border-left: 5px solid var(--finance-green);
+            border-radius: 0 14px 14px 0;
+            background: var(--finance-mint);
+            color: #174b3d;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.12em;
+        }
+        .content img {
+            border: 1px solid var(--finance-line);
+            border-radius: 16px !important;
+            box-shadow: 0 16px 38px rgba(7, 31, 45, .1);
+        }
+        .content table {
+            width: 100%;
+            margin: 1.75rem 0;
+            overflow: hidden;
+            border: 1px solid var(--finance-line);
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 12px;
+            background: #fff;
+        }
+        .content th { background: var(--finance-navy); color: #fff; }
+        .content th, .content td { padding: .85rem 1rem; border-bottom: 1px solid var(--finance-line); }
+        .content tr:last-child td { border-bottom: 0; }
+        .content code { border-radius: 5px; background: #e8efeb; color: #126247; padding: .12rem .35rem; }
+
+        main[style*="max-width: 800px"] article {
+            padding: clamp(1.4rem, 4vw, 3.2rem);
+            border: 1px solid var(--finance-line);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, .96);
+            box-shadow: var(--finance-shadow);
+        }
+        .breadcrumb {
+            display: inline-flex;
+            padding: .55rem 1rem;
+            border: 1px solid var(--finance-line);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .8);
+            font-size: .85rem;
+        }
+        article > .card.rounded-4 {
+            border-color: rgba(18, 168, 115, .25) !important;
+            background: linear-gradient(135deg, #f3fbf7, #fff) !important;
+        }
+        main > .card.rounded-4:first-child {
+            background: linear-gradient(120deg, var(--finance-navy), var(--finance-navy-soft)) !important;
+            color: #fff;
+        }
+        main > .card.rounded-4:first-child h1 { color: #fff; }
+        main > .card.rounded-4:first-child .text-muted { color: #a9c8c4 !important; }
+        main > .card.rounded-4:first-child img.rounded-circle {
+            border-color: var(--finance-green) !important;
+            box-shadow: 0 0 0 7px rgba(18, 168, 115, .14) !important;
+        }
+        main > .card.rounded-4:first-child .btn-outline-dark {
+            border-color: rgba(255, 255, 255, .34);
+            color: #fff;
+        }
+        main > .card.rounded-4:first-child .btn-outline-dark:hover {
+            border-color: var(--finance-green);
+            background: var(--finance-green);
+        }
+
+        aside {
+            padding: 1.25rem;
+            border: 1px solid var(--finance-line);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, .76);
+        }
+        aside > .h5 { color: var(--finance-ink); font-size: .8rem; letter-spacing: .1em; }
+        aside img { border-radius: 10px !important; }
+        .comments-section { border-color: var(--finance-line) !important; }
+        .related-posts > .h4::before, .comments-section > .h4::before {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: .65rem;
+            border-radius: 50%;
+            content: "";
+            background: var(--finance-green);
+        }
+        .btn-success { border-color: var(--finance-green) !important; background: var(--finance-green) !important; }
+        .btn-primary { border-color: #146b8c !important; background: #146b8c !important; }
+
+        @media (max-width: 991.98px) {
+            .navbar .container { min-height: 58px; }
+            .navbar-collapse { padding: 1rem 0 .5rem; }
+            .navbar .nav-link { padding: .75rem .25rem; }
+            .navbar .nav-link::after { right: auto; left: .25rem; width: 36px; }
+            .position-relative.hero-card { min-height: 250px !important; }
+        }
+        @media (max-width: 575.98px) {
+            main.container { padding-right: 1rem; padding-left: 1rem; }
+            main > header { padding-left: 1rem !important; }
+            .card-body { padding: 1.1rem; }
+            .pagination .page-link { padding: .55rem .75rem; font-size: .82rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+        }
+    </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
 
