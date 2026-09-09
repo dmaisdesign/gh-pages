@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://www.dmaisdesign.com.br/sitemap.xml
